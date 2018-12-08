@@ -1,0 +1,1757 @@
+* { 
+box-sizing: border-box; 
+}
+
+/*important tags from foundation begin*/
+
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+   * 1. Set default font family to sans-serif.
+   * 2. Prevent iOS and IE text size adjust after device orientation change,
+   *    without disabling user zoom.
+   */
+
+/*
+html {
+  font-family: sans-serif;
+ }
+*/
+
+  html {
+  font-size: 100%;
+  box-sizing: border-box; 
+}
+
+  html,
+body {
+  height: 100%; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  background: #fefefe;
+}
+
+/* from lonegoose
+body 	{
+	font-size: 1em;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: .03em;
+	line-height: 1.5em;
+	margin: 0 auto;
+}
+*?
+
+
+
+
+
+body.menupage nav.main-nav ul.nav li.menupage a,
+body.public-projects nav.main-nav ul.nav li.public-projects a,
+body.lamprepair nav.main-nav li.lamprepair a,
+body.repair nav.main-nav li.repair a,
+body.residential nav.main-nav li.residential a,
+body.mosaics nav.main-nav li.mosaics a,
+body.contact nav.main-nav li.contact a,
+body.wineglasses nav.main-nav li.wineglasses a,
+body.bowls nav.main-nav li.bowls a,
+body.more nav.main-nav li.more a,
+body.web nav.main-nav ul.nav li.web a
+ 	{
+		box-shadow: 0 0 20px 0 #2199e8;
+		color: #0a3f62;
+		background: #fffbfa;
+ }
+ /* The above color is a darker version of blue #2199e8 and a lighter version of orange #e63900*/
+
+.wrapper 	{
+	max-width: 960px;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+.page-content 	{
+	padding: 0 5vw;
+}
+
+p {
+  font-size: inherit;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility; }
+/*
+.wrapper p 	{
+    font-size: 1rem;
+    margin-bottom: .15rem;
+    line-height: 1.35;
+}
+
+@media screen and (min-width: 500px) {
+.wrapper p 	{
+    font-size: 1.15rem;
+    padding-top: .325rem;
+    padding-bottom: .325rem;
+	} 
+}
+
+@media screen and (min-width: 750px) {
+.wrapper p 	{
+    font-size: 1.35rem;
+    padding-top: .325rem;
+    padding-bottom: .325rem;
+	} 
+}
+*/
+
+
+
+
+
+
+/*The following are carried over from the Foundation CSS*/
+h1, h2, h3, h4, h5, h6 	{
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+article h2 	{
+	font-family: Georgia, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-style: italic;
+	text-align: center;
+	font-weight: 800;
+}
+
+@media screen and (min-width: 500px) 	{
+article h2{
+	font-weight: 800
+	}
+}
+
+
+.foliotext p 	{
+	margin: 0 2rem;
+}
+
+a:hover 	{
+	text-decoration: underline;
+}
+
+.announcetxt h3 {
+    font-family: Raleway, Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0 auto;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: .5rem;
+}
+
+@media screen and (min-width: 40em) {
+	.announcetxt h3 	{
+		font-weight: 800;
+		font-size: 1.5rem;
+	}
+}
+
+.announcetxt h6 {
+  font-style: italic;
+  padding: .25rem 0; 
+}
+
+/* BEGIN TRANSPARENT OVERLAY CSS */
+
+@media screen and (min-width: 40em) {
+.adjust-rt 	{
+	float:right;
+	}
+}
+.adjust-lft 	{
+	float:left;
+}
+.art_clear 	{
+	clear: both;
+}
+.art-clear img 	{
+	clear: both;	
+}
+
+.article p 	{
+    font-size: 1rem;
+    margin-bottom: .15rem;
+    line-height: 1.35;
+    	margin: 0 4rem;
+}
+
+@media screen and (min-width: 500px) {
+.article p 	{
+    font-size: 1.15rem;
+    padding-top: .325rem;
+    padding-bottom: .325rem;
+    margin: 0 4rem;
+	} 
+}
+
+@media screen and (min-width: 750px) {
+.article p 	{
+    font-size: 1.35rem;
+    padding-top: .325rem;
+    padding-bottom: .325rem;
+    margin: 0 4rem;
+	} 
+}
+
+article p 	{
+	margin: 0 .75rem;
+	}
+
+@media screen and (min-width: 500px) {
+article p 	{
+	margin: 0 4rem;
+	} 
+}
+
+.project p 	{
+	margin: .5rem .75rem 0 .75rem;
+	text-indent: 1rem;
+	}
+
+@media screen and (min-width: 500px) 	{
+.project p {
+	margin: 0 2rem;
+	}
+}
+
+.project h4 	{
+	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: .025rem;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	padding: .5rem 0;
+	color: #e63900;
+	margin: 0 .5rem;
+}
+
+article h4 	{
+	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: .025rem;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	padding: .5rem 0;
+	color: #e63900;
+	margin: .5rem .5rem 0 .5rem;
+}
+
+@media screen and (min-width: 550px) {
+article h4  {
+	font-size: 1.5rem;
+	line-height: 1.85rem;
+	margin: 1.25rem 2rem 0 2rem;
+  }
+}
+
+.article h4 	{
+	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: .025rem;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	padding: .5rem 0;
+	color: #e63900;
+	margin: .5rem .5rem 0 .5rem;
+}
+
+@media screen and (min-width: 550px) {
+.article h4  {
+	line-height: 1.85rem;
+	margin: 1.25rem 2rem 0 2rem;
+	font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+.project h4  {
+	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: .025rem;
+	font-size: 1.5rem;
+	line-height: 1.85rem;
+	padding: .5rem 0;
+	color: #e63900;
+	margin: 0 2rem;
+  }
+}
+
+article h5 	{
+	color: #2199e8;
+	font-size: 1rem;
+	font-style: italic;
+   font-weight: 600;
+   text-align: center;
+   margin: .75rem .25rem .35rem .25rem;
+	}
+
+.project h5 	{
+	color: #2199e8;
+	font-size: 1rem;
+	font-style: italic;
+   font-weight: 600;
+   text-align: center;
+   margin: .75rem .25rem .35rem .25rem;
+	}
+
+
+@media screen and (min-width: 550px) 	{
+article h5 	{
+	font-size: 1.5rem;
+   margin: .75rem 0 .35rem 0;
+	}
+}
+
+@media screen and (min-width: 550px) 	{
+.project h5 	{
+	font-size: 1.5rem;
+   margin: .75rem 0 .35rem 0;
+	}
+}
+
+article h6 	{
+	color: #2199e8;
+	font-size: 1.1rem;
+	font-style: italic;
+   font-weight: 600;
+   text-indent: 1rem;
+   margin-top: .5rem;
+}
+
+.project h6 	{
+	color: #2199e8;
+	font-size: 1.1rem;
+	font-style: italic;
+   font-weight: 600;
+   text-indent: 1rem;
+   margin-top: .5rem;
+}
+
+@media screen and (min-width: 550px) 	{
+article h6 	{
+	color: #2199e8;
+	font-size: 1.5rem;
+	font-style: italic;
+   font-weight: 600;
+   text-indent: 4rem;
+	}
+}
+
+@media screen and (min-width: 550px) 	{
+.project h6 	{
+	color: #2199e8;
+	font-size: 1.5rem;
+	font-style: italic;
+   font-weight: 600;
+   text-indent: 4rem;
+	}
+}
+
+article .thumbnail 	{
+	border: none;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+article ul 	{
+	margin: 0 1rem 1rem 2rem;
+	font-size: .85rem;
+}
+
+
+@media screen and (min-width: 550px) {
+article ul 	{
+	margin: 0 8rem;
+	font-size: 1.15rem;
+	}
+}
+
+.folio p 	{
+	margin: 0 1rem;
+}
+
+@media screen and (min-width: 550px) {
+.folio p 	{
+	margin: 0 4rem;
+	}
+}
+
+/* .callout.large overrides the foundation css for the same */
+.callout.large {
+    padding-top: .5rem;
+    padding-right: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .5rem;
+}
+@media screen and (min-width: 40em) 	{
+.centeredtext h2 	{
+	font-size: 2.5rem;
+	text-align: center;
+	}
+
+.centeredtext h4 	{
+	font-size: 1.75rem;
+	text-align: center;
+	}
+
+.centeredtext p 	{
+	padding-left: 10rem;
+	padding-right: 10rem;
+	}
+}
+
+cite 	{
+	font-size: .8125rem;
+	color: #767676;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cpbody {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  }
+
+div.centeredtext 	{
+	padding-bottom: 1.15em;
+} 
+
+div.overlay_desc{
+	position:absolute; /* absolute position (so we can position it where we want)*/
+	bottom:0px; /* position will be on bottom */
+	left:0px;
+	width:100%;
+	/* styling bellow */
+	background-color:black;
+	color:white;
+	opacity:0.6; /* transparency */
+	filter:alpha(opacity=60); /* IE transparency */
+}
+/*The border tags are from the Foundation CSS. This was a previous border tag: 	border-bottom: solid 2px #e8e8e8;
+	transition: box-shadow 200ms ease-out;*/
+
+.figcap_lft	{
+	float: left;
+	margin: 0 1rem .5rem 1rem;
+}
+
+@media screen and (min-width: 550px) {
+	.figcap_lft	{
+	float: left;
+	margin-right: 0 1.5rem;
+	width: 35%;
+	}
+}
+
+.figcap_rt 	{
+		float: right;
+		margin: 0 1rem .5rem 1rem;	
+	}
+
+@media screen and (min-width: 550px) {
+	.figcap_rt 	{
+		float: right;
+		margin: 0 1.5rem;
+		width: 35%;	
+	}
+}
+
+
+.figcap-lft	{
+	float: left;
+	margin: 0 1rem .5rem 1rem;
+}
+
+@media screen and (min-width: 550px) {
+	.figcap-lft	{
+	float: left;
+	margin-right: 0 1.5rem;
+	width: 35%;
+	}
+}
+
+.figcap-rt 	{
+		float: right;
+		margin: 0 1rem .5rem 1rem;	
+	}
+
+@media screen and (min-width: 550px) {
+	.figcap-rt 	{
+		float: right;
+		margin: 0 1.5rem;
+		width: 35%;	
+	}
+}
+
+figure {
+		margin: .5rem auto;
+		display: table;
+		text-align: center;
+		min-width: 96px;
+}
+
+@media screen and (min-width: 550px) {
+	figure	{
+	min-width: 128px;
+	margin: 1rem auto;
+	}
+}
+
+
+/*The margin on the figure is borrowed from the foundation CSS 
+@media screen and (max-width: 549px) 	{
+	figure 	{
+		margin-right: .5rem;
+		margin-left: .5rem;
+	}
+}
+*/
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
+	 font-style: italic;
+}​
+
+figcaption cite:before 	{
+	content: none;
+}
+
+figcaption p 	{
+	font-size: .8125rem;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+/* End Stack Overflow question re: figcaption*/
+
+.figure 	{
+	border: solid 4px #fefefe;
+    box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+    display: inline-block;
+    line-height: 0;
+    max-width: 100%;
+    transition: box-shadow 200ms ease-out;
+    border-radius: 0;
+}
+
+.figure p 	{
+	font-size: .8125rem;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.figure .figure-caption 	{
+	display: inline-block;
+}
+
+.figure-caption p 	{
+	font-size: .8125rem;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
+	text-indent: 0;
+}
+
+@media screen and (min-width: 550px) {
+	.figure-caption p 	{
+	font-size: 1rem;
+	}
+}
+
+.figure-caption cite p 	{
+	font-size: .8125rem;
+	padding-top: 0;
+}
+
+@media screen and (min-width: 550px) {
+	.figure-caption cite p 	{
+		font-size: .9375rem;
+		padding-top: 0;
+	}
+}
+
+.figure-lft 	{
+	margin: 1em 40px 1em 0;
+}
+
+.float2img img 	{
+	max-height: 188px;
+	margin-top: 2.5rem;
+}
+
+.form 	{
+	background: #eee;
+	padding: 3rem;
+}
+
+li.project 	{
+	padding: .5rem 0;
+	border: 1px solid #ccc;
+	list-style-type: none;
+}
+
+@media screen and (min-width: 550px) {
+	li.project 	{
+		padding: 1.25rem 0 .5rem 0;
+		border: 1px solid #ccc;
+		list-style-type: none;
+	}
+}
+
+.listdetail img 	{
+	height: 192px;
+}
+
+.mainimage img 	{
+	max-height: 512px;
+	margin: 0 auto;
+	float:left;
+}
+
+@media screen and (min-width: 550px) {
+	.mainimage img 	{
+		margin-top: 1rem;
+	}
+}
+
+.folio-wrapper img  {
+  max-height: 192px;
+}
+
+@media screen and (min-width: 550px)  {
+.folio-wrapper img  {
+  max-height: 192px;
+  }
+}
+
+@media screen and (min-width: 950px)  {
+.folio-wrapper img  {
+  max-height: 256px;
+  }
+}
+
+.mainimgfloatlft   {
+  float:left;
+  width: 35%;
+  text-align: center;
+  margin-right: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.mainimgfloatrt {   
+  float:right;
+  width: 35%;
+  text-align: center;
+  margin-left: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.mainimggrid2 .float2img 	{
+	margin-right: 1rem;
+	float: left;
+}
+
+.mainimggrid2rev .float2img {
+    margin-left: 1rem;
+    float: right;
+}
+
+.mainimgtxt p 	{
+	font-size: 1.15rem;
+}
+
+.overlay {
+	/*float:left;  important */
+	position:relative; /* important(so we can absolutely position the description div */
+  	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p.description_content{
+	padding:10px;
+	margin:0px;
+	font-size: 16px;
+}
+
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+}
+
+.success p:first-child {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+    color: red;
+    font-size: 5rem;
+    font-style: italic;
+	text-align: center;
+}
+
+.thumbnail	{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul.projecttest 	{
+	list-style: none;
+}
+
+blockquote 	{
+	margin: 0;
+	padding: .5rem 0;
+}
+
+.panel blockquote{
+	margin-right: 1rem;
+	margin-left: 1rem;
+	padding: .25rem 0;
+}
+
+.panel blockquote p 	{
+	color: #e63900;
+	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: .025rem;
+	font-size: 1rem;
+	line-height: 1.35rem;
+}
+
+@media screen and (min-width: 550px)  {
+	.panel blockquote p 	{
+		font-size: 1.15rem;
+		line-height: 1.5rem;
+	}
+}
+
+p.articlesub	{
+	font-size: .9375rem;
+	color: #767676;
+	padding-top: 0;
+}
+
+@media screen and (min-width: 550px)  {
+	p.articlesub 	{
+		text-align: right;
+	}
+}
+
+.red{
+	color: red;
+}
+.green {
+	color: green;
+}
+.blue 	{
+	color: blue;
+}
+
+/*All float stuff here at the end of gridjr for now*/
+/*Begin float image text*/
+.floatgrid  {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.floatgridimglft   {
+  grid-template-columns: 1fr 2fr;
+}
+
+.floatgridimgrt   {
+  grid-template-columns: 2fr 1fr;
+}
+
+.floathead  {
+  grid-row: 1;
+  grid-column: 1/3;
+  justify-self: center;
+}
+
+@media (min-width: 550px) {
+.floatgridimglft .floathead  {
+  grid-row: 1;
+  grid-column: 2/3;
+  justify-self: center;
+  }
+}
+
+@media (min-width: 550px) {
+.floatgridimgrt .floathead   {
+  grid-row: 1;
+  grid-column: 1/3;
+  justify-self: center;
+  }
+}
+
+.floatimgcontent  {
+  grid-area: floatimagecontent;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media (min-width: 550px)   {
+  .floatimgcontent  {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.floatimg  {
+  width: 50%;
+}
+
+@media (min-width: 550px) {
+.floatimg  {
+  width: 35%;
+  }
+}
+
+.mainimgtall .floatimg   {
+  float: left;
+  text-align: center;
+  margin-top: 2rem;
+  margin-right: 2%;
+}
+
+.mainimgtallrev .floatimg   {
+  float: right;
+  text-align: center;
+  margin-left: 2%;
+}
+
+.mainimgtall .floatcontent   {
+  margin-right: 2%;
+}
+
+.mainimgtallrev .floatcontent   {
+  margin-left: 2%;
+}
+
+
+/*Begin Main Image Tall Float Image Layout*/
+
+.mainimgfloatlft  {
+  grid-area: mainimagefloatleft;
+}
+
+.mainimgfloatlft  {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+      "mainimagefloatleft projecttext"
+      "flexarea2          flexarea2";       
+}
+
+@media (min-width: 550px) {
+  .mainimgfloatlft {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:  
+      "mainimagefloatleft projecttext"
+      "flexarea2          flexarea2"; 
+  }
+}
+
+.mainimgfloatrt   {
+  grid-area: mainimagefloatright;
+}
+
+.mainimgfloatrt  {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "projecttext mainimagefloatright"
+    "flexarea2   flexarea2";       
+}
+
+@media (min-width: 550px) {
+  .mainimgfloatrt {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "projecttext mainimagefloatright"
+    "flexarea2   flexarea2";; 
+  }
+}
+
+/*End Main Image Tall Float Image Layout*/
+
+.floatimglft 	{
+	float:left;
+}
+
+@media (min-width: 550px) {
+div.mainimgfloat.mainimagegrid1 .mainimg 	{
+	float: left;
+	width: 50%;
+	}
+
+div.mainimgfloat.mainimagegrid1rev .mainimg	{
+	float:right;
+	width: 50%;
+	}
+}
+
+@media (min-width: 550px) {
+div.mainimgfloat.mainimagegrid21 .mainimg 	{
+	float: left;
+	width: 65%;
+	}
+
+div.mainimgfloat.mainimagegrid21rev .mainimg	{
+	float:right;
+	width: 65%;
+	}
+}
+
+@media (min-width: 550px) {
+div.mainimgfloat.mainimagegrid1 .mainimg 	{
+	float: left;
+	width: 50%;
+   margin: .5rem 2.5rem .5rem 1.5rem
+	}
+
+div.mainimgfloat.mainimagegrid1rev .mainimg	{
+	float:right;
+	width: 50%;
+   margin: .5rem 1.5rem .5rem 2.5rem
+	}
+}
+
+
+div.mainimgfloat.mainimgtall .mainimg 	{
+	float: left;
+	width: 50%;
+	}
+
+div.mainimgfloat.mainimgtallrev .mainimg	{
+	float:right;
+	width: 50%;
+	}
+
+div.mainimgfloat.mainimggrid2 .twoimguno 	{
+	float:left;
+	width: 44%;
+	padding: 0;
+	}
+
+div.mainimgfloat.mainimggrid2 .twoimgdue 	{
+	float:right;
+	width: 44%;
+	padding: 0;
+	}
+
+div.mainimgfloat.mainimggrid2rev .twoimguno 	{
+	float:left;
+	width: 44%;
+	padding: 0;
+	}
+
+div.mainimgfloat.mainimggrid2rev .twoimgdue 	{
+	float:right;
+	width: 44%;
+	padding: 0;
+	}
+
+
+
+@media screen and (min-width: 550px) {
+div.mainimgfloat.mainimgtall .mainimg 	{
+	float: left;
+	width: 35%;
+	}
+
+div.mainimgfloat.mainimgtallrev .mainimg	{
+	float:right;
+	width: 35%;
+	}
+
+
+div.mainimgfloat.mainimggrid2 .twoimguno 	{
+	float:left;
+	width: 45%;
+	padding: 1rem;
+	}
+
+div.mainimgfloat.mainimggrid2 .twoimgdue 	{
+	float:left;
+	width: 45%;
+	padding: 1rem;
+	}
+
+div.mainimgfloat.mainimggrid2rev .twoimguno 	{
+	float:right;
+	width: 45%;
+	padding: 1rem;
+	}
+
+div.mainimgfloat.mainimggrid2rev .twoimgdue 	{
+	float:right;
+	width: 45%;
+	padding: 1rem;
+	}
+}
+
+	@media (min-width: 550px) {
+div.mainimgfloat.mainimggrid2 .twoimguno 	{
+	float:left;
+	width: 30.3333%;
+	padding: 1rem;
+	}
+
+div.mainimgfloat.mainimggrid2 .twoimgdue 	{
+	float:left;
+	width: 30.3333%;
+	padding: 1rem;
+	margin-right: 1rem;
+	}
+
+div.mainimgfloat.mainimggrid2rev .twoimguno 	{
+	float:right;
+	width: 30.3333%;
+	padding: 1rem;
+	}
+
+div.mainimgfloat.mainimggrid2rev .twoimgdue 	{
+	float:right;
+	width: 30.3333%;
+	padding: 1rem;
+	margin-left: 1rem;
+	}
+}
+
+@media (max-width: 549px) {
+div.mainimgfloat.mainimggrid2 .maintxt 	{
+	clear:both;
+	}
+
+div.mainimgfloat.mainimggrid2rev .maintxt 	{
+	clear:both;
+	}
+}
+
+@media (min-width: 550px) {
+div.mainimgfloat.mainimgstackrev .twoimguno 	{
+	float:right;
+	width: 50%;
+	}
+
+div.mainimgfloat.mainimgstackrev .twoimgdue 	{
+	float:right;
+	width: 50%;
+	clear:right;
+	}
+
+div.mainimgfloat.mainimgstack .twoimguno 	{
+	float:left;
+	width: 50%;
+	}
+
+div.mainimgfloat.mainimgstack .twoimgdue 	{
+	float:left;
+	width: 50%;
+	clear:left;
+	}
+}
+
+ul.nav li 	{
+	display: block;
+	list-style: none;
+}
+
+.headtitle   {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 1.5rem;
+  } 
+
+@media (min-width: 550px) {
+  .headtitle   {
+    font-size: 3rem;
+  } 
+}
+/*
+.headsub {
+    font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .025rem;
+    font-size: 1rem;
+    line-height: 1.15rem;
+    padding: .5rem 0;
+    color: #e63900;
+    margin: 0 2rem;
+}
+*/
+@media (min-width: 550px) {
+  .headsub   {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  } 
+}
+
+.main-nav   {
+  padding: 0 .5rem;
+  display: block;
+}
+/* .main-nav display: block; is from foundation*/
+
+.main-nav a:link, .main-nav a:visited 	{
+	padding: .5rem .75rem;
+	display: block;
+}
+
+.main-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media (min-width: 1150px) {
+	.main-nav ul {
+		flex-wrap: wrap;
+	}	
+}
+
+.main-nav ul 	{
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+.main-nav li {
+  text-align: center;
+  padding: 0 .25rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 550px) 	{
+	.main-nav li 	{
+		padding: .75rem;
+	}
+}
+
+.main-nav div:last-child {
+  margin: 0 0 0 auto;
+}
+
+/*original foundation button background-color is #2199e8*/
+.button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.5em 1em;
+  margin: 0 0 .5rem 0;
+  font-size: 0.9rem;
+  background-color: hsla(204,81%,52%,1);
+  color: #fff; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }
+
+@media (min-width: 550px) 	{
+	.button 	{
+  margin: 0 0 .75rem 0;
+}
+}
+
+.backtotop .button 	{
+	color: #010101;
+	background-color: hsla(204,81%,52%,.25);
+}
+
+  .button:hover, .button:focus {
+    background-color: #1583cc;
+    color: #fefefe; }
+  .button.tiny {
+    font-size: 0.6rem; }
+  .button.small {
+    font-size: 0.75rem; }
+
+  .button.large {
+    font-size: .85rem; }
+
+@media (min-width: 550px) 	{
+  .button.large {
+    font-size: 1.25rem; }
+}
+
+  .button.expanded {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+  .button.primary {
+    background-color: #2199e8;
+    color: #fefefe; }
+    .button.primary:hover, .button.primary:focus {
+      background-color: #147cc0;
+      color: #fefefe; }
+  .button.secondary {
+    background-color: #777;
+    color: #fefefe; }
+    .button.secondary:hover, .button.secondary:focus {
+      background-color: #5f5f5f;
+      color: #fefefe; }
+  .button.success {
+    background-color: #3adb76;
+    color: #fefefe; }
+    .button.success:hover, .button.success:focus {
+      background-color: #22bb5b;
+      color: #fefefe; }
+  .button.warning {
+    background-color: #ffae00;
+    color: #fefefe; }
+    .button.warning:hover, .button.warning:focus {
+      background-color: #cc8b00;
+      color: #fefefe; }
+  .button.alert {
+    background-color: #ec5840;
+    color: #fefefe; }
+    .button.alert:hover, .button.alert:focus {
+      background-color: #da3116;
+      color: #fefefe; }
+  .button.hollow {
+    border: 1px solid #2199e8;
+    color: #2199e8; }
+    .button.hollow, .button.hollow:hover, .button.hollow:focus {
+      background-color: transparent; }
+    .button.hollow:hover, .button.hollow:focus {
+      border-color: #0c4d78;
+      color: #0c4d78; }
+    .button.hollow.primary {
+      border: 1px solid #2199e8;
+      color: #2199e8; }
+      .button.hollow.primary:hover, .button.hollow.primary:focus {
+        border-color: #0c4d78;
+        color: #0c4d78; }
+    .button.hollow.secondary {
+      border: 1px solid #777;
+      color: #777; }
+      .button.hollow.secondary:hover, .button.hollow.secondary:focus {
+        border-color: #3c3c3c;
+        color: #3c3c3c; }
+    .button.hollow.success {
+      border: 1px solid #3adb76;
+      color: #3adb76; }
+      .button.hollow.success:hover, .button.hollow.success:focus {
+        border-color: #157539;
+        color: #157539; }
+    .button.hollow.warning {
+      border: 1px solid #ffae00;
+      color: #ffae00; }
+      .button.hollow.warning:hover, .button.hollow.warning:focus {
+        border-color: #805700;
+        color: #805700; }
+    .button.hollow.alert {
+      border: 1px solid #ec5840;
+      color: #ec5840; }
+      .button.hollow.alert:hover, .button.hollow.alert:focus {
+        border-color: #881f0e;
+        color: #881f0e; }
+  .button.disabled, .button[disabled] {
+    opacity: 0.25;
+    cursor: not-allowed; }
+  .button.dropdown::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.4em;
+    border-color: #fefefe transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    position: relative;
+    top: 0.4em;
+    float: right;
+    margin-left: 1em;
+    display: inline-block; }
+  .button.arrow-only::after {
+    margin-left: 0;
+    float: none;
+    top: -0.1em; }
+
+.button.large 	{
+	width:100%;
+}
+
+@media (min-width: 550px) {
+	.button.large: {
+		font-size: 1rem;
+	}    
+}
+
+@media (min-width: 850px) {
+	.button.large: {
+		font-size: 1.25rem;
+	}    
+}
+
+@media (min-width: 750px) {
+	.button.large: {
+		font-size: 1rem;
+	}    
+}
+
+@media (min-width: 550px) {
+	.button 	{
+  		padding: 0.5em .5em;
+  		margin: 0 0 0 0;
+	}
+}
+
+@media (min-width: 850px) {
+	.button 	{
+  		padding: 0.85em 1em;
+  		margin: 0 0 0 0;
+	}
+}
+
+.head 	{
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+} 
+
+.heading 	{
+	margin: 0 auto;
+}
+
+@media (min-width: 550px) 	{
+.heading 	{
+	margin: 2rem auto 0 auto;
+	}
+}
+
+.heading .gridfigure 	{
+	padding: 0 1rem 0 1rem;
+	margin: 0 auto 0 auto;
+}
+
+@media (min-width: 550px) 	{
+	.heading .gridfigure 	{
+		margin-top: 1rem;
+	}
+}
+
+.heading figcaption {
+	padding: 0 1rem 0 1rem
+}
+
+.head 	{
+	text-align: center;
+	padding: 1rem 1rem 0 1rem;
+}
+
+.button .selected 	{
+	background-color: #e63900;
+	color: #000000;
+}
+
+.folio-wrapper ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  flex-flow: row wrap;
+  padding: 1.5rem 0 0 0;
+	}
+
+@media (min-width: 550px) {
+.folio-wrapper ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  flex-flow: row wrap;
+  padding: 1.5rem 0 0 0;
+	}
+}
+
+.folio-wrapper ul li {
+	list-style: none;
+	margin: 0 auto;
+	}
+
+@media (min-width: 550px) {
+.folio-wrapper ul li {
+	padding: 10px 20px;
+	}
+}
+
+.contact 	{
+	padding: 0 .75rem;
+}
+
+.panel hr 	{
+	margin: .5rem auto;
+}
+
+p.blockintro 	{
+	font-size: .9375rem;
+	padding-bottom: 0;
+}
+@media (min-width: 550px) {
+.flt_rt 	{
+	float:right;
+	}
+}
+
+.introduction 	{
+	padding: 0 1rem;
+}
+
+
+
+.colorarray .announcetxt ul li 	{ 
+    list-style-type: disc;
+    margin-left: 1.25rem;
+    background: none;
+}
+
+@media (min-width: 550px) {
+.colorarray .announcetxt ul {
+    margin: 0 .8rem;
+    font-size: 1.15rem;
+	}
+}
+
+.project h2   {
+  font-family: Georgia, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  padding-top: 0;
+}
+
+@media (min-width: 550px) {
+.project h2   {
+    font-weight: 800;
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+.announcetxt  {
+  padding: .5rem .75rem .25rem .75rem;
+}
+
+@media (min-width: 550px) {
+  .announcetxt  {
+    padding: 1.25rem;
+  }
+}
+
+.maintxt img 	{
+	margin: 1rem 0;
+}
+
+.section-title h2 a {
+	color: #147dc2;
+}
+/*color #147dc2 is a darker version of #2199e8*/
+
+.maintxt:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.callout 	{
+	border-bottom: none;
+	margin: 0;
+   /*padding: 1rem;*/
+   border-radius: 0;
+   position: relative;
+   color: #0a0a0a;
+   background-color: white;
+}
+
+.asideright 	{
+	float: right;
+	width: 25%;
+	border-left: 1px solid #2199e8;
+	border-bottom: 1px solid #2199e8;
+}
+
+.flexlist {
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+}
+
+.flexlist li {
+	list-style: none;
+	font-size: .8rem;
+	margin-right: 20px;
+}
+
+ul.flexlist	{ 	
+	list-style: none;
+	margin: 0 0 .5rem 0;
+}
+
+@media (min-width: 550px) {
+	ul.flexlist 	{
+	margin: 0 1rem 0 0;
+	}
+}
+
+.panel  {
+  background-color: #eee;
+  padding: .25rem .5rem;
+}
+
+.footer.panel p  {
+	padding: 0;
+  	font-size: .85rem;
+}
+
+.footer.panel 	{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 550px) {
+  .footer.panel  {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.footer.panel .listitem p 	{
+	margin: 0;
+	padding-left: 1rem;
+	padding-bottom: .5rem;
+}
+
+.flexlist ul 	{
+	margin: 0;
+}
+
+a {
+	color: #126eab;
+}
+
+.backtotop 	{
+	margin-top: 1.5rem;
+}
+
+
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle; }
+
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+img {s
+  border: 0; }
+
+  .callout > :first-child {
+    margin-top: 0; }
+
+@media screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem; }
+  h2 {
+    font-size: 2.5rem; }
+}
+
+.text-center {
+  text-align: center; }
+
+.lead {
+  font-size: 125%;
+  line-height: 1.6; }
+
+  hr {
+  max-width: 75rem;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #cacaca;
+  border-left: 0;
+  margin: 1.25rem auto;
+  clear: both; }
+
+  /**
+   * Address differences between Firefox and other browsers.
+   */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+.column.row.row, .row.row.columns {
+  float: none; }
+
+/**
+
+ /*important tags from foundation end*/
+ 
+.colorarraylt div.mainimg ul li {
+    background: none;
+}
+
+div.datelined 	{
+	display: inline;
+}
+
+.datelined p:first-child {
+    color: red;
+    display: inline;
+}
+
+.dateline 	{
+	color: green;
+}
+
+.timelyalert {
+  padding: 0 2%;
+  border-style: double;
+  border-width: 6px;
+  border-color: hsla(15, 100%, 45%, .25);
+  text-align: center;
+  background: -moz-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f1f1f1), color-stop(25%, #ffffff), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
+  background: -o-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
+  background: linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%); }
+
+@media screen and (min-width: 750px) {
+	.timelyalert {
+		margin: 1rem 5rem;
+	}
+}
+
+/*test perch forum item*/
+
+.content-full-image {
+    display: block;
+    box-sizing: border-box;
+    height: 300px;
+    width: 100%;
+}
+    .full-width-content-img {
+      width: 100%;
+      height: 100%;
+      +object-fit(cover);
+}
+  .content-img-left {
+    width: 350px;
+    height: 250px;
+    float: left;
+    text-align: left;
+    margin: 0 24px 24px 0;
+    +object-fit(cover);
+}
+  .content-img-right {
+    width: 350px;
+    height: 250px;
+    float: right;
+    text-align: right;
+    margin: 0 0 24px 24px;
+    +object-fit(cover);
+}
+
+
+
