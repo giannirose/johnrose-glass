@@ -53,11 +53,7 @@ body 	{
 	line-height: 1.5em;
 	margin: 0 auto;
 }
-*?
-
-
-
-
+*/
 
 body.menupage nav.main-nav ul.nav li.menupage a,
 body.public-projects nav.main-nav ul.nav li.public-projects a,
@@ -78,20 +74,17 @@ body.web nav.main-nav ul.nav li.web a
  /* The above color is a darker version of blue #2199e8 and a lighter version of orange #e63900*/
 
 .wrapper 	{
-	max-width: 960px;
    margin-left: auto;
    margin-right: auto;
-
 }
 
 .page-content 	{
-	padding: 0 5vw;
+	padding: 0 3.5vw;
 }
 
 p {
   font-size: inherit;
   line-height: 1.5;
-  margin-bottom: 1rem;
   text-rendering: optimizeLegibility; }
 /*
 .wrapper p 	{
@@ -117,11 +110,6 @@ p {
 }
 */
 
-
-
-
-
-
 /*The following are carried over from the Foundation CSS*/
 h1, h2, h3, h4, h5, h6 	{
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -139,6 +127,7 @@ article h2 	{
 	font-style: italic;
 	text-align: center;
 	font-weight: 800;
+	margin-bottom: .65em;
 }
 
 @media screen and (min-width: 500px) 	{
@@ -146,7 +135,6 @@ article h2{
 	font-weight: 800
 	}
 }
-
 
 .foliotext p 	{
 	margin: 0 2rem;
@@ -199,7 +187,6 @@ a:hover 	{
     font-size: 1rem;
     margin-bottom: .15rem;
     line-height: 1.35;
-    	margin: 0 4rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -219,10 +206,6 @@ a:hover 	{
     margin: 0 4rem;
 	} 
 }
-
-article p 	{
-	margin: 0 .75rem;
-	}
 
 @media screen and (min-width: 500px) {
 article p 	{
@@ -264,7 +247,7 @@ article h4 	{
 	line-height: 1.25rem;
 	padding: .5rem 0;
 	color: #e63900;
-	margin: .5rem .5rem 0 .5rem;
+	margin: .5rem 0 0 0;
 }
 
 @media screen and (min-width: 550px) {
@@ -285,7 +268,6 @@ article h4  {
 	line-height: 1.25rem;
 	padding: .5rem 0;
 	color: #e63900;
-	margin: .5rem .5rem 0 .5rem;
 }
 
 @media screen and (min-width: 550px) {
@@ -413,11 +395,9 @@ article ul 	{
 
 /* .callout.large overrides the foundation css for the same */
 .callout.large {
-    padding-top: .5rem;
-    padding-right: .5rem;
-    padding-bottom: .5rem;
-    padding-left: .5rem;
+	padding: .5rem 0;
 }
+
 @media screen and (min-width: 40em) 	{
 .centeredtext h2 	{
 	font-size: 2.5rem;
@@ -595,7 +575,7 @@ figcaption p 	{
 
 @media screen and (min-width: 550px) {
 	.figure-caption p 	{
-	font-size: 1rem;
+	font-size: .85rem;
 	}
 }
 
@@ -1108,7 +1088,7 @@ ul.nav li 	{
 	list-style: none;
 }
 
-.headtitle   {
+.head h1   {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -1120,41 +1100,23 @@ ul.nav li 	{
     font-size: 1.5rem;
   } 
 
-@media (min-width: 550px) {
-  .headtitle   {
-    font-size: 3rem;
-  } 
-}
-/*
-.headsub {
-    font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: .025rem;
-    font-size: 1rem;
-    line-height: 1.15rem;
-    padding: .5rem 0;
-    color: #e63900;
-    margin: 0 2rem;
-}
-*/
-@media (min-width: 550px) {
-  .headsub   {
-    font-size: 1.5rem;
-    line-height: 2rem;
+@media (min-width: 640px) {
+  .head h1   {
+    font-size: 2.5rem;
   } 
 }
 
-.main-nav   {
-  padding: 0 .5rem;
-  display: block;
+@media (min-width: 640px) {
+  .head h2  {
+    font-size: 1.25rem;
+    line-height: 1.85rem;
+  } 
 }
-/* .main-nav display: block; is from foundation*/
 
 .main-nav a:link, .main-nav a:visited 	{
 	padding: .5rem .75rem;
 	display: block;
+	text-decoration: none;
 }
 
 .main-nav ul {
@@ -1176,12 +1138,13 @@ ul.nav li 	{
 .main-nav ul 	{
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 }
 
 
 .main-nav li {
   text-align: center;
-  padding: 0 .25rem;
+  padding: 0 .25rem .25rem .25rem;
   line-height: 1.5rem;
 }
 
@@ -1236,9 +1199,9 @@ ul.nav li 	{
   .button.large {
     font-size: .85rem; }
 
-@media (min-width: 550px) 	{
+@media (min-width: 640px) 	{
   .button.large {
-    font-size: 1.25rem; }
+    font-size: 1rem; }
 }
 
   .button.expanded {
@@ -1379,7 +1342,6 @@ ul.nav li 	{
     color: inherit;
     text-rendering: optimizeLegibility;
     margin-top: 0;
-    margin-bottom: 0.5rem;
     line-height: 1.4;
 } 
 
@@ -1387,21 +1349,9 @@ ul.nav li 	{
 	margin: 0 auto;
 }
 
-@media (min-width: 550px) 	{
-.heading 	{
-	margin: 2rem auto 0 auto;
-	}
-}
-
 .heading .gridfigure 	{
-	padding: 0 1rem 0 1rem;
-	margin: 0 auto 0 auto;
-}
-
-@media (min-width: 550px) 	{
-	.heading .gridfigure 	{
-		margin-top: 1rem;
-	}
+	padding: 1rem;
+	margin: 0 auto;
 }
 
 .heading figcaption {
@@ -1410,7 +1360,7 @@ ul.nav li 	{
 
 .head 	{
 	text-align: center;
-	padding: 1rem 1rem 0 1rem;
+	padding: 1rem;
 }
 
 .button .selected 	{
@@ -1471,18 +1421,16 @@ p.blockintro 	{
 	padding: 0 1rem;
 }
 
-
-
 .colorarray .announcetxt ul li 	{ 
     list-style-type: disc;
     margin-left: 1.25rem;
     background: none;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 640px) {
 .colorarray .announcetxt ul {
     margin: 0 .8rem;
-    font-size: 1.15rem;
+    font-size: .9rem;
 	}
 }
 
@@ -1495,11 +1443,12 @@ p.blockintro 	{
   padding-top: 0;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 640px) {
 .project h2   {
     font-weight: 800;
-    font-size: 2rem;
-    padding-top: 1rem;
+    font-size: 1.75rem;
+    padding-top: .5rem;
+    padding-bottom: .85rem;
   }
 }
 
@@ -1607,10 +1556,6 @@ a {
 	margin-top: 1.5rem;
 }
 
-
-
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -1621,34 +1566,40 @@ img {
 /**
    * Remove border when inside `a` element in IE 8/9/10.
    */
-img {s
-  border: 0; }
+img {
+  border: 0; 
+}
 
   .callout > :first-child {
-    margin-top: 0; }
+    margin-top: .5em;
+    margin-bottom: .35em;
+     }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 640px) {
   h1 {
-    font-size: 3rem; }
+    font-size: 2rem; }
   h2 {
-    font-size: 2.5rem; }
+    font-size: 1.5rem; }
 }
 
 .text-center {
   text-align: center; }
 
+/*.lead from foundation css*/
 .lead {
-  font-size: 125%;
-  line-height: 1.6; }
+  font-size: 1.15em;
+  line-height: 1.5; 
+  margin-bottom: 1em;
+}
 
   hr {
-  max-width: 75rem;
+  max-width: 960px;
   height: 0;
   border-right: 0;
   border-top: 0;
   border-bottom: 1px solid #cacaca;
   border-left: 0;
-  margin: 1.25rem auto;
+  margin: .65rem auto .65rem auto;
   clear: both; }
 
   /**
@@ -1752,6 +1703,43 @@ div.datelined 	{
     margin: 0 0 24px 24px;
     +object-fit(cover);
 }
+
+.address-block 	{
+	padding: 1.5em 0 1.5em 1.5em;
+}
+
+ul,
+ol,
+dl {
+  margin-bottom: 1rem;
+  list-style-position: outside; }
+
+.figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
+	 font-style: italic;
+}​
+
+.figcaption cite:before 	{
+	content: none;
+}
+
+.figcaption p 	{
+	font-size: .8125rem;
+	padding-top: .35em;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.asideright p 	{
+	margin: 0;
+}
+
+.link-style.modalcolor 	{
+	color: #fefefe;
+}
+
 
 
 
