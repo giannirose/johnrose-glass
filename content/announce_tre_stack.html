@@ -1,0 +1,96 @@
+<li>
+   <!--Begin grid defined area with row announce, up to 3 stacked images, and row description-->
+   <div class="announcegrid <perch:content type="select" id="choose_arrange" label="Choose from Images followed by Text, or Text followed by Images." options="Images and Text- Single Column Label|announcerow3stack, Text and Images- Single Column Label|announcerow3revstack, Images and Text- Double Column Label|announcehorrow3stack, Text and Images- Double Column Label|announcehorrow3revstack" allowempty="false" html="true" help="Recommended: Use a Single Column Label when choosing vertical lettering (checkbox below) and the Double Column for horizontal lettering." />  ">
+      <div class="rowannounce <perch:content type="checkbox" id="sectiontitle" label="Check to make the label lettering read vertically." suppress="true" allowempty="true"/> 
+         <perch:if exists="sectiontitle"> 
+            section-title
+         </perch:if>" ><!--Begin class rowannounce--><!--Begin class sectiontitle-->
+
+         <h2><a href="<perch:content type="text" id="pagelink1" label="add the URL tag for the page to be linked to. If there is no link, leave blank." />" >
+            <perch:content type="smarttext" id="rowannounce" label="This is the label for the row of image(s) and text that is a link.A second line can be achieved by adding a &#60;br&#62; HTML tag between words." html="true" title="true" /> </a>
+         </h2>
+
+         <perch:if not-exists="pagelink1">
+         <h2>
+            <perch:content type="smarttext" id="rownolink" label="This is the label for the row of image(s) and text when no link text is entered.A second line can be achieved by adding a &#60;br&#62; HTML tag between words." html="true" title="true" />
+         </h2>
+         </perch:if> 
+
+      </div><!--End class section-title--><!--End class rowannounce-->     
+      <!--Add written content here-->
+      <div class="announcetxt">
+         <perch:if exists="announcetxthead">
+            <h3><perch:content type="text" id="announcetxthead" label="Headline for the text area." html="true" /></h3>
+               </perch:if>
+                  <perch:content type="textarea" id="announcetxt" label="Body text to describe this section" size="m" markdown="true" editor="markitup"/>
+      </div>
+      <!--End written content-->      
+      <!--Begin Image 1 of 3-->
+         <div class="announceimg announceimg1">
+            <figure>
+               <a href="<perch:content type="text" id="pagelink1" label="add the URL tag for the page to be linked to. If there is no link, leave blank." />" >
+                  <img src="<perch:content type="image" id="image_one" label="Image" help="Upload or select an image" bucket="projects"/>" alt="<perch:content type="text" id="alt_one" label="Description"  help="Description of this image" title="true"  />" />
+               </a>
+                  <!--Begin caption and citation area-->
+                  <figcaption class="figure-caption">
+                     <p><perch:content id="figure_caption" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" /></p>
+                        <cite>
+                           <p>
+                              <perch:content type="checkbox" id="copyrightsymbol" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+                                 <perch:if exists="copyrightsymbol">
+                                    <span class="copyright">&copy; </span> 
+                                 </perch:if>
+                                    <perch:content id="imgcite" type="text" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true" />
+                           </p> 
+                        </cite>
+                  </figcaption>
+                  <!--End Caption and Citation area-->
+            </figure>
+         </div><!--End Image 1 of up to 3--> 
+         <!--Begin Image 2 of 3-->
+            <div class="announceimg announceimg2">
+               <figure>
+                  <a href="<perch:content type="text" id="pagelink1" label="add the URL tag for the page to be linked to. If there is no link, leave blank." />" >
+                     <img src="<perch:content type="image" id="image_two" label="Image" help="Upload or select an image" bucket="projects"/>" alt="<perch:content type="text" id="alt_two" label="Description"  help="Description of this image" title="true"  />" />
+                  </a>
+                     <!--Begin caption and citation area-->
+                     <figcaption class="figure-caption">
+                        <p><perch:content id="figure_caption2" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" /></p>
+                           <cite>
+                              <p>
+                                 <perch:content type="checkbox" id="copyrightsymbol2" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+                                    <perch:if exists="copyrightsymbol">
+                                       <span class="copyright">&copy; </span> 
+                                    </perch:if>
+                                       <perch:content id="imgcite2" type="text" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true" />
+                              </p> 
+                           </cite>
+                     </figcaption>
+                     <!--End Caption and Citation area-->
+               </figure>
+            </div><!--End Main Image 2 of up to 3 stacked--> 
+            <!--Begin Image 3 of up to 3 stacked-->
+            <div class="announceimg announceimg3">
+               <figure>
+                  <a href="<perch:content type="text" id="pagelink1" label="add the URL tag for the page to be linked to. If there is no link, leave blank." />" >
+                     <img src="<perch:content type="image" id="image_three" label="Image" help="Upload or select an image" bucket="projects"/>" alt="<perch:content type="text" id="alt_three" label="Description"  help="Description of this image" title="true"  />" />
+                  </a>
+                     <!--Begin caption and citation area-->
+                     <figcaption class="figure-caption">
+                        <p><perch:content id="figure_caption3" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" /></p>
+                           <cite>
+                              <p>
+                                 <perch:content type="checkbox" id="copyrightsymbol3" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+                                    <perch:if exists="copyrightsymbol">
+                                       <span class="copyright">&copy; </span> 
+                                    </perch:if>
+                                       <perch:content id="imgcite3" type="text" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true" />
+                              </p> 
+                           </cite>
+                     </figcaption>
+                     <!--End Caption and Citation area-->
+               </figure>
+            </div><!--End Image 3 of up to 3 stacked-->               
+   </div><!--End class announcegrid-->
+</li>
+<hr>
