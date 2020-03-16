@@ -1,0 +1,32 @@
+<perch:help>
+   <p>This page is a list of types of work, each item in a row. Each row features a label of the type of work being presented, an image or two or three, and some text. A choice can be made to show the image followed by the text, or the text followed by the image. The idea is that alternating these can make the page more visually interesting.</p>
+      <p>A design feature on wider screens is vertical writing in the label of each row- check the box to make the label lettering read vertically. A Single Column Heading is recommended for this. A choice can be made for horizontal lettering (leave the box unchecked); horizontal lettering looks better with a Double Column Heading.</p>
+         <p>There is the option for introductory text at the top of the page.</p>
+</perch:help>
+<perch:before>
+   <div class="basicgrid">	
+	   <ul class="colorarray">
+
+            </perch:before>
+               <perch:content type="text" id="name_edit_item" label="Name for this item." help="Editor: This gives a name to this item in the edit area, rather than Item1, Item2, etc. It does not appear on the page." title="true" suppress="true"/>
+                  <perch:blocks>
+                     <perch:block type="Single Image Row" label="Labeled Rows with Image and Text" >
+                        <perch:template path="content/announce_uno.html" />
+                     </perch:block>
+                     <perch:block type="Double Image Row" label="Labeled Rows with 2 Images and Text">
+                        <perch:template path="content/announce_due.html" />
+                     </perch:block>
+                     <perch:block type="Triple Image Row" label="Labeled Rows with 3 horizontal Images and Text">
+                        <perch:template path="content/announce_tre.html" />
+                     </perch:block>
+
+                     <perch:block type="Triple Image Row Stack" label="Labeled Rows with 3 vertical Images and Text">
+                        <perch:template path="content/announce_tre_stack.html" />
+                     </perch:block>
+
+                  </perch:blocks>
+<perch:after>
+
+	   </ul>
+   </div>
+</perch:after>
