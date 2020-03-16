@@ -1,0 +1,16 @@
+<div class="main-nav">
+	<perch:before>
+		<nav>
+			<ul class="nav">
+	</perch:before>
+				<perch:repeater id="buttons" label="Link Buttons">
+					<li class="<perch:content type="text" id="chosenlink" label="Enter a class for the link that is the active page" help="This adds a class to the list element that is the button-link in navigation. By selecting the body tag for the active page, we use CSS to somehow highlight the active link." />" >
+						<a href="<perch:content type="text" id="button_link" label="Button Link" />" class="button large <perch:content type="select" id="button_class" allowempty="true" options="hollow, filled" allowempty="false" />"><perch:content type="text" id="button_text" label="Button Text" order="1" html="true" /></a>
+					</li>
+				</perch:repeater>
+	<perch:after>
+			</ul>
+		</nav>
+	</perch:after>
+</div>
+	<hr>
