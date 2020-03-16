@@ -1,0 +1,11 @@
+
+				<ul class="flexlist">
+					<li>
+						<p><strong><perch:content id="listhead" type="smarttext" label="title for a list of links" html="true" title="true" /></strong></p>
+							<ul>
+								<perch:repeater id="linklist" label="List additional links, pages and resources">
+								<li class="listitem"><perch:content id="list_item" type="textarea" label="add item" size="s" html="true" markdown="true" editor="markitup" /></li>
+								</perch:repeater>
+							</ul>
+					</li>
+				</ul>
