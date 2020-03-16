@@ -35,43 +35,62 @@ body {
 body {
   padding: 0;
   margin: 0;
-  font-size: 1em;
+  font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  color: #0a0a0a;
-  background: #fefefe;
+  color: var(--main-color);
+  color: hsl(0, 0%, 4%);
+  background-color: var(--main-bg-color);
+  background-color: hsl(0, 0%, 100%);
 }
 
-/* from lonegoose
-body 	{
-	font-size: 1em;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	letter-spacing: .03em;
-	line-height: 1.5em;
-	margin: 0 auto;
-}
-*/
-
-body.menupage nav.main-nav ul.nav li.menupage a,
-body.public-projects nav.main-nav ul.nav li.public-projects a,
-body.lamprepair nav.main-nav li.lamprepair a,
-body.repair nav.main-nav li.repair a,
-body.residential nav.main-nav li.residential a,
-body.mosaics nav.main-nav li.mosaics a,
-body.contact nav.main-nav li.contact a,
-body.wineglasses nav.main-nav li.wineglasses a,
-body.bowls nav.main-nav li.bowls a,
-body.more nav.main-nav li.more a,
-body.web nav.main-nav ul.nav li.web a
+body.menupage li.menupage a,
+body.projects li.projects a,
+body.lamprepair li.lamprepair a,
+body.repair li.repair a,
+body.residential li.residential a,
+body.mosaics li.mosaics a,
+body.wineglasses li.wineglasses a,
+body.more li.more a
  	{
 		box-shadow: 0 0 20px 0 #2199e8;
 		color: #0a3f62;
 		background: #fffbfa;
  }
  /* The above color is a darker version of blue #2199e8 and a lighter version of orange #e63900*/
+
+  /**
+   * Address differences between Firefox and other browsers.
+   */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+.column.row.row, .row.row.columns {
+  float: none; }
 
 .wrapper 	{
    margin-left: auto;
@@ -83,56 +102,176 @@ body.web nav.main-nav ul.nav li.web a
 }
 
 p {
-  font-size: inherit;
+  font-size: 16px;
   line-height: 1.5;
-  text-rendering: optimizeLegibility; }
-/*
-.wrapper p 	{
-    font-size: 1rem;
-    margin-bottom: .15rem;
-    line-height: 1.35;
+  text-rendering: optimizeLegibility;
+  padding-left: .625rem;
+  padding-right: .625rem;
 }
-
-@media screen and (min-width: 500px) {
-.wrapper p 	{
-    font-size: 1.15rem;
-    padding-top: .325rem;
-    padding-bottom: .325rem;
-	} 
-}
-
-@media screen and (min-width: 750px) {
-.wrapper p 	{
-    font-size: 1.35rem;
-    padding-top: .325rem;
-    padding-bottom: .325rem;
-	} 
-}
-*/
 
 /*The following are carried over from the Foundation CSS*/
 h1, h2, h3, h4, h5, h6 	{
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: inherit;
     text-rendering: optimizeLegibility;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 
-article h2 	{
-	font-family: Georgia, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-	font-style: italic;
-	text-align: center;
-	font-weight: 800;
-	margin-bottom: .65em;
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.65rem 0 1rem 0;
+    color: var(--main-header-color);
+  	 color: hsla(195, 100%, 15%, 1); 
+ 	}
+
+  h1.page-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: var(--main-header-color);
+    color: hsla(195, 100%, 15%, 1);
+    letter-spacing: .1rem; 
+ 	}
+
+	@media screen and (min-width: 550px) {
+		h1.page-title 	{
+			font-size: 1.85rem;
+		}
+	}
+
+  h2 {
+  	 font-family: Georgia, serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    text-align: center;
+    margin: 0 .65rem 1rem .65rem;
+    letter-spacing: .0325em; 
+	}
+
+	h2.page-subtitle 	{
+		margin-bottom: .25rem;
+	}
+
+	.rowannounce h2 {
+		margin: 0;
+	}
+
+	h3 	{
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin: 1rem 0;
+	}
+
+	/*Any sibling of the first element will be selected*/
+	h3.indent + * 	{
+		padding-left: 1.625rem;
+	}
+
+	h4 	{
+		font-family: Georgia, sans-serif;
+		font-size: 1.35rem;
+		font-style: italic;
+		font-weight: bold;
+		margin: .85rem 0;
+	}
+
+	h4.indent 	{
+		text-indent: 1.5rem;
+	}
+
+/*Any sibling of the first element will be selected*/
+	h4.indent + * 	{
+		padding-left: 3.125rem;
+	}
+
+	.article h4 	{
+	color: #e63900;
+	}
+
+	article h4 	{
+		color: #e63900;
+	}
+
+	.projects h4  {
+		color: #e63900;
+  }
+
+	h5 	{
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    margin: .85rem 0;
+	}
+
+	h5.indent 	{
+		text-indent: 3rem;
+	}
+
+/*Any sibling of the first element will be selected*/
+	h5.indent + * 	{
+		padding-left: 4.625rem;
+	}
+
+	.article h5 	{
+		color: #2199e8;
+	}
+
+	article h5 	{
+		color: #2199e8;
+	}
+
+	h6 	{
+    	font-size: 1.15rem;
+    	font-style: italic;
+    	font-weight: 500;
+		margin: .85rem 0;
+	}
+
+	h6.indent 	{
+		text-indent: 4.5rem;
+	}
+
+	div > h6.indent + * 	{
+		padding-left: 6.375rem;
+	}
+
+		.article h6	{
+		color: #2199e8;
+	}
+
+	article h6 	{
+		color: #2199e8;
+	}
+
+.announcegrid h2 	{
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
 }
 
-@media screen and (min-width: 500px) 	{
-article h2{
-	font-weight: 800
+.section-title h2 a {
+	color: #147dc2;
+}
+
+@media screen and (min-width: 550px) {
+	p 	{
+		font-size: 1rem;
+		padding-bottom: .5rem;
+	}
+
+  h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 1.75rem .65rem 1rem .65rem; 
+ 	}
+
+  h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    margin: .65rem 0;
 	}
 }
 
@@ -183,36 +322,6 @@ a:hover 	{
 	clear: both;	
 }
 
-.article p 	{
-    font-size: 1rem;
-    margin-bottom: .15rem;
-    line-height: 1.35;
-}
-
-@media screen and (min-width: 500px) {
-.article p 	{
-    font-size: 1.15rem;
-    padding-top: .325rem;
-    padding-bottom: .325rem;
-    margin: 0 4rem;
-	} 
-}
-
-@media screen and (min-width: 750px) {
-.article p 	{
-    font-size: 1.35rem;
-    padding-top: .325rem;
-    padding-bottom: .325rem;
-    margin: 0 4rem;
-	} 
-}
-
-@media screen and (min-width: 500px) {
-article p 	{
-	margin: 0 4rem;
-	} 
-}
-
 .project p 	{
 	margin: .5rem .75rem 0 .75rem;
 	text-indent: 1rem;
@@ -220,154 +329,14 @@ article p 	{
 
 @media screen and (min-width: 500px) 	{
 .project p {
-	margin: 0 2rem;
-	}
-}
-
-.project h4 	{
-	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
-	font-style: italic;
-	font-weight: bold;
-	text-align: left;
-	letter-spacing: .025rem;
-	font-size: 1rem;
-	line-height: 1.25rem;
-	padding: .5rem 0;
-	color: #e63900;
-	margin: 0 .5rem;
-}
-
-article h4 	{
-	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
-	font-style: italic;
-	font-weight: bold;
-	text-align: left;
-	letter-spacing: .025rem;
-	font-size: 1rem;
-	line-height: 1.25rem;
-	padding: .5rem 0;
-	color: #e63900;
-	margin: .5rem 0 0 0;
-}
-
-@media screen and (min-width: 550px) {
-article h4  {
-	font-size: 1.5rem;
-	line-height: 1.85rem;
-	margin: 1.25rem 2rem 0 2rem;
-  }
-}
-
-.article h4 	{
-	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
-	font-style: italic;
-	font-weight: bold;
-	text-align: left;
-	letter-spacing: .025rem;
-	font-size: 1rem;
-	line-height: 1.25rem;
-	padding: .5rem 0;
-	color: #e63900;
-}
-
-@media screen and (min-width: 550px) {
-.article h4  {
-	line-height: 1.85rem;
-	margin: 1.25rem 2rem 0 2rem;
-	font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 550px) {
-.project h4  {
-	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
-	font-style: italic;
-	font-weight: bold;
-	text-align: left;
-	letter-spacing: .025rem;
-	font-size: 1.5rem;
-	line-height: 1.85rem;
-	padding: .5rem 0;
-	color: #e63900;
-	margin: 0 2rem;
-  }
-}
-
-article h5 	{
-	color: #2199e8;
-	font-size: 1rem;
-	font-style: italic;
-   font-weight: 600;
-   text-align: center;
-   margin: .75rem .25rem .35rem .25rem;
-	}
-
-.project h5 	{
-	color: #2199e8;
-	font-size: 1rem;
-	font-style: italic;
-   font-weight: 600;
-   text-align: center;
-   margin: .75rem .25rem .35rem .25rem;
-	}
-
-
-@media screen and (min-width: 550px) 	{
-article h5 	{
-	font-size: 1.5rem;
-   margin: .75rem 0 .35rem 0;
-	}
-}
-
-@media screen and (min-width: 550px) 	{
-.project h5 	{
-	font-size: 1.5rem;
-   margin: .75rem 0 .35rem 0;
-	}
-}
-
-article h6 	{
-	color: #2199e8;
-	font-size: 1.1rem;
-	font-style: italic;
-   font-weight: 600;
-   text-indent: 1rem;
-   margin-top: .5rem;
-}
-
-.project h6 	{
-	color: #2199e8;
-	font-size: 1.1rem;
-	font-style: italic;
-   font-weight: 600;
-   text-indent: 1rem;
-   margin-top: .5rem;
-}
-
-@media screen and (min-width: 550px) 	{
-article h6 	{
-	color: #2199e8;
-	font-size: 1.5rem;
-	font-style: italic;
-   font-weight: 600;
-   text-indent: 4rem;
-	}
-}
-
-@media screen and (min-width: 550px) 	{
-.project h6 	{
-	color: #2199e8;
-	font-size: 1.5rem;
-	font-style: italic;
-   font-weight: 600;
-   text-indent: 4rem;
+	padding: 0 2rem .35em 2rem;
 	}
 }
 
 article .thumbnail 	{
 	border: none;
 	margin-bottom: 0;
-	width: 100%;
+	max-width: 100%;
 }
 
 article ul 	{
@@ -399,10 +368,6 @@ article ul 	{
 }
 
 @media screen and (min-width: 40em) 	{
-.centeredtext h2 	{
-	font-size: 2.5rem;
-	text-align: center;
-	}
 
 .centeredtext h4 	{
 	font-size: 1.75rem;
@@ -416,7 +381,6 @@ article ul 	{
 }
 
 cite 	{
-	font-size: .8125rem;
 	color: #767676;
 }
 
@@ -435,58 +399,16 @@ div.centeredtext 	{
 	padding-bottom: 1.15em;
 } 
 
-div.overlay_desc{
-	position:absolute; /* absolute position (so we can position it where we want)*/
-	bottom:0px; /* position will be on bottom */
-	left:0px;
-	width:100%;
-	/* styling bellow */
-	background-color:black;
-	color:white;
-	opacity:0.6; /* transparency */
-	filter:alpha(opacity=60); /* IE transparency */
+figure {
+		margin: 0 auto;
+		display: table;
+		text-align: center;
+		min-width: 96px;
 }
-/*The border tags are from the Foundation CSS. This was a previous border tag: 	border-bottom: solid 2px #e8e8e8;
-	transition: box-shadow 200ms ease-out;*/
-
-.figcap_lft	{
-	float: left;
-	margin: 0 1rem .5rem 1rem;
-}
-
-@media screen and (min-width: 550px) {
-	.figcap_lft	{
-	float: left;
-	margin-right: 0 1.5rem;
-	width: 35%;
-	}
-}
-
-.figcap_rt 	{
-		float: right;
-		margin: 0 1rem .5rem 1rem;	
-	}
-
-@media screen and (min-width: 550px) {
-	.figcap_rt 	{
-		float: right;
-		margin: 0 1.5rem;
-		width: 35%;	
-	}
-}
-
 
 .figcap-lft	{
 	float: left;
 	margin: 0 1rem .5rem 1rem;
-}
-
-@media screen and (min-width: 550px) {
-	.figcap-lft	{
-	float: left;
-	margin-right: 0 1.5rem;
-	width: 35%;
-	}
 }
 
 .figcap-rt 	{
@@ -495,6 +417,17 @@ div.overlay_desc{
 	}
 
 @media screen and (min-width: 550px) {
+	figure	{
+	min-width: 128px;
+	margin: 1rem auto;
+	}
+
+	.figcap-lft	{
+	float: left;
+	margin-right: 0 1.5rem;
+	width: 35%;
+	}	
+
 	.figcap-rt 	{
 		float: right;
 		margin: 0 1.5rem;
@@ -502,34 +435,12 @@ div.overlay_desc{
 	}
 }
 
-figure {
-		margin: .5rem auto;
-		display: table;
-		text-align: center;
-		min-width: 96px;
-}
-
-@media screen and (min-width: 550px) {
-	figure	{
-	min-width: 128px;
-	margin: 1rem auto;
-	}
-}
-
-
-/*The margin on the figure is borrowed from the foundation CSS 
-@media screen and (max-width: 549px) 	{
-	figure 	{
-		margin-right: .5rem;
-		margin-left: .5rem;
-	}
-}
-*/
 figcaption {
-    display: table-caption;
+    display: block;
     caption-side: bottom;
     text-align: center;
 	 font-style: italic;
+	 padding: .25rem .15rem 0 .15rem;
 }​
 
 figcaption cite:before 	{
@@ -543,13 +454,9 @@ figcaption p 	{
 	margin: 0;
 }
 
-/* End Stack Overflow question re: figcaption*/
-
 .figure 	{
-	border: solid 4px #fefefe;
+	border: solid 4px transparent;
     box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
-    display: inline-block;
-    line-height: 0;
     max-width: 100%;
     transition: box-shadow 200ms ease-out;
     border-radius: 0;
@@ -566,29 +473,24 @@ figcaption p 	{
 }
 
 .figure-caption p 	{
-	font-size: .8125rem;
-	padding-top: 0;
-	padding-bottom: 0;
 	margin: 0;
 	text-indent: 0;
+	padding: .15rem;
 }
 
 @media screen and (min-width: 550px) {
+	figcaption {
+		display: table-caption;
+		text-align: center;
+	}
+
 	.figure-caption p 	{
-	font-size: .85rem;
+	font-size: .8125rem;
 	}
 }
 
 .figure-caption cite p 	{
 	font-size: .8125rem;
-	padding-top: 0;
-}
-
-@media screen and (min-width: 550px) {
-	.figure-caption cite p 	{
-		font-size: .9375rem;
-		padding-top: 0;
-	}
 }
 
 .figure-lft 	{
@@ -598,11 +500,6 @@ figcaption p 	{
 .float2img img 	{
 	max-height: 188px;
 	margin-top: 2.5rem;
-}
-
-.form 	{
-	background: #eee;
-	padding: 3rem;
 }
 
 li.project 	{
@@ -637,6 +534,7 @@ li.project 	{
 
 .folio-wrapper img  {
   max-height: 192px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 550px)  {
@@ -709,13 +607,14 @@ p.description_content{
 }
 
 .success p:first-child {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    text-rendering: optimizeLegibility;
-    color: red;
-    font-size: 5rem;
-    font-style: italic;
+   line-height: 1.6;
+   margin-bottom: 1rem;
+   text-rendering: optimizeLegibility;
+   color: red;
+   font-size: 2rem;
+   font-style: italic;
 	text-align: center;
+	padding: 2rem 0;
 }
 
 .thumbnail	{
@@ -744,6 +643,7 @@ blockquote 	{
 	font-family: Georgia, "Helvetica Neue", HelveticaNeue, Helvetica, Roboto, Arial, sans-serif;
 	font-style: italic;
 	font-weight: bold;
+	text-align: start;
 	text-align: left;
 	letter-spacing: .025rem;
 	font-size: 1rem;
@@ -765,6 +665,7 @@ p.articlesub	{
 
 @media screen and (min-width: 550px)  {
 	p.articlesub 	{
+		text-align: end;
 		text-align: right;
 	}
 }
@@ -859,7 +760,6 @@ p.articlesub	{
 .mainimgtallrev .floatcontent   {
   margin-left: 2%;
 }
-
 
 /*Begin Main Image Tall Float Image Layout*/
 
@@ -1088,31 +988,6 @@ ul.nav li 	{
 	list-style: none;
 }
 
-.head h1   {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    color: inherit;
-    text-rendering: optimizeLegibility;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-    font-size: 1.5rem;
-  } 
-
-@media (min-width: 640px) {
-  .head h1   {
-    font-size: 2.5rem;
-  } 
-}
-
-@media (min-width: 640px) {
-  .head h2  {
-    font-size: 1.25rem;
-    line-height: 1.85rem;
-  } 
-}
-
 .main-nav a:link, .main-nav a:visited 	{
 	padding: .5rem .75rem;
 	display: block;
@@ -1172,8 +1047,12 @@ ul.nav li 	{
   padding: 0.5em 1em;
   margin: 0 0 .5rem 0;
   font-size: 0.9rem;
-  background-color: hsla(204,81%,52%,1);
-  color: #fff; }
+  /*background-color: hsla(204,81%,52%,1);*/
+  background-color: var(--button-dk-bg-color);
+  background-color: hsla(204, 81%, 52%, 1);
+  color: var(--button-dk-color); 
+  color: #fff;
+	}
   [data-whatinput='mouse'] .button {
     outline: 0; }
 
@@ -1339,7 +1218,6 @@ ul.nav li 	{
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: inherit;
     text-rendering: optimizeLegibility;
     margin-top: 0;
     line-height: 1.4;
@@ -1365,7 +1243,8 @@ ul.nav li 	{
 
 .button .selected 	{
 	background-color: #e63900;
-	color: #000000;
+	color: var(--main-color);
+	color: hsl(0, 0%, 4%);
 }
 
 .folio-wrapper ul {
@@ -1374,34 +1253,23 @@ ul.nav li 	{
   display: flex;
   justify-content: center;  
   flex-flow: row wrap;
-  padding: 1.5rem 0 0 0;
+  padding: 0;
 	}
 
 @media (min-width: 550px) {
 .folio-wrapper ul {
   list-style: none;
-  margin: 0;
   display: flex;
   justify-content: center;  
   flex-flow: row wrap;
-  padding: 1.5rem 0 0 0;
+  margin: 1.5rem 0 0 0;
 	}
 }
 
 .folio-wrapper ul li {
 	list-style: none;
-	margin: 0 auto;
+	padding: 1rem;
 	}
-
-@media (min-width: 550px) {
-.folio-wrapper ul li {
-	padding: 10px 20px;
-	}
-}
-
-.contact 	{
-	padding: 0 .75rem;
-}
 
 .panel hr 	{
 	margin: .5rem auto;
@@ -1421,10 +1289,20 @@ p.blockintro 	{
 	padding: 0 1rem;
 }
 
+.announcetxt  {
+  padding: .5rem .5rem .75rem .5rem;
+}
+
 .colorarray .announcetxt ul li 	{ 
     list-style-type: disc;
     margin-left: 1.25rem;
     background: none;
+}
+
+@media (min-width: 550px) {
+  .announcetxt  {
+    padding: 1.25rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1434,42 +1312,9 @@ p.blockintro 	{
 	}
 }
 
-.project h2   {
-  font-family: Georgia, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-style: italic;
-  text-align: center;
-  padding-top: 0;
-}
-
-@media (min-width: 640px) {
-.project h2   {
-    font-weight: 800;
-    font-size: 1.75rem;
-    padding-top: .5rem;
-    padding-bottom: .85rem;
-  }
-}
-
-.announcetxt  {
-  padding: .5rem .75rem .25rem .75rem;
-}
-
-@media (min-width: 550px) {
-  .announcetxt  {
-    padding: 1.25rem;
-  }
-}
-
 .maintxt img 	{
 	margin: 1rem 0;
 }
-
-.section-title h2 a {
-	color: #147dc2;
-}
-/*color #147dc2 is a darker version of #2199e8*/
 
 .maintxt:after {
   content: "";
@@ -1483,7 +1328,8 @@ p.blockintro 	{
    /*padding: 1rem;*/
    border-radius: 0;
    position: relative;
-   color: #0a0a0a;
+   color: var(--main-color);
+   color: hsl(0, 0%, 4%);
    background-color: white;
 }
 
@@ -1508,6 +1354,11 @@ p.blockintro 	{
 ul.flexlist	{ 	
 	list-style: none;
 	margin: 0 0 .5rem 0;
+	padding-left: 0;
+}
+
+.flexlist ul 	{
+	padding-left: 0;
 }
 
 @media (min-width: 550px) {
@@ -1548,9 +1399,33 @@ ul.flexlist	{
 	margin: 0;
 }
 
+
+/* Links
+     ========================================================================== */
+/**
+   * Remove the gray background color from active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * Improve readability of focused elements when they are also in an
+   * active/hover state.
+   */
+a:active,
+a:hover {
+  outline: 0; }
+
+	/* The above are from the foundation CSS */
 a {
 	color: #126eab;
-}
+	/* color: hsla(195, 100%, 15%, 1); */
+   text-decoration: none;
+   line-height: inherit;
+   cursor: pointer;
+	}
+
+	/*======================================================================== */
 
 .backtotop 	{
 	margin-top: 1.5rem;
@@ -1560,8 +1435,16 @@ img {
   max-width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic;
-  display: inline-block;
-  vertical-align: middle; }
+  display: block;
+  vertical-align: middle; 
+  margin: 0 auto;
+}
+
+@media (max-width: 550px) {
+	img 	{
+		max-height: 550px
+	}
+}
 
 /**
    * Remove border when inside `a` element in IE 8/9/10.
@@ -1570,17 +1453,17 @@ img {
   border: 0; 
 }
 
+.article-textrow img 	{
+	max-height: 256px;
+	margin: 30px 50px;
+}
+
   .callout > :first-child {
     margin-top: .5em;
     margin-bottom: .35em;
      }
 
-@media screen and (min-width: 640px) {
-  h1 {
-    font-size: 2rem; }
-  h2 {
-    font-size: 1.5rem; }
-}
+
 
 .text-center {
   text-align: center; }
@@ -1600,41 +1483,12 @@ img {
   border-bottom: 1px solid #cacaca;
   border-left: 0;
   margin: .65rem auto .65rem auto;
-  clear: both; }
+  clear: both; 
+  }
 
-  /**
-   * Address differences between Firefox and other browsers.
-   */
-hr {
-  box-sizing: content-box;
-  height: 0; }
-
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0; }
-
-.column.row.row, .row.row.columns {
-  float: none; }
-
-/**
+  hr.article-end 	{
+  	margin-bottom: 5em;
+  } 	
 
  /*important tags from foundation end*/
  
@@ -1661,12 +1515,14 @@ div.datelined 	{
   border-width: 6px;
   border-color: hsla(15, 100%, 45%, .25);
   text-align: center;
+  margin-bottom: 1rem;  
   background: -moz-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f1f1f1), color-stop(25%, #ffffff), color-stop(100%, #ffffff));
   background: -webkit-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
   background: -o-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
   background: -ms-linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%);
-  background: linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%); }
+  background: linear-gradient(top, #f1f1f1 1%, #ffffff 25%, #ffffff 100%); 
+  }
 
 @media screen and (min-width: 750px) {
 	.timelyalert {
@@ -1691,6 +1547,7 @@ div.datelined 	{
     width: 350px;
     height: 250px;
     float: left;
+    text-align: start;
     text-align: left;
     margin: 0 24px 24px 0;
     +object-fit(cover);
@@ -1699,6 +1556,7 @@ div.datelined 	{
     width: 350px;
     height: 250px;
     float: right;
+    text-align: end;
     text-align: right;
     margin: 0 0 24px 24px;
     +object-fit(cover);
@@ -1739,6 +1597,184 @@ dl {
 .link-style.modalcolor 	{
 	color: #fefefe;
 }
+
+.page-header-nav 	{
+	border: 1px solid hsla(54, 100%, 50%, 1);
+	padding-top: .175rem;
+	border-radius: 5em;
+	width: 30%;
+	height: 32px;
+	background-clip: padding-box;
+	background: #007099;
+	font-size: 1em;
+	text-align: center;
+}
+
+.page-header  {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.page-heading   {
+  grid-column: 1 / 6;
+  color: hsla(54, 100%, 50%, 1);
+  text-align: center;
+}
+
+.page-header a 	{
+	color: hsla(54, 100%, 50%, 1);
+}
+
+.page-header-nav   {
+  grid-column: 1 / 6;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.page-subtitle 	{
+	font-size: 1rem;
+	padding: 0 .65rem;
+	color: hsla(54, 100%, 50%, 1);
+}
+
+@media screen and (min-width: 640px) {
+
+.page-header-nav   {
+    padding-top: 1.3rem;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+  .page-heading   {
+    grid-column: 1 / 5;
+    justify-self: center;
+    align-self: center;
+    color: hsla(54, 100%, 50%, 1);
+    text-align: center;
+}
+
+  .page-header-nav   {
+    grid-column: 5;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .page-header-nav   {
+    padding-top: 2.15rem;
+    font-size: 1.15em;
+    width: 100px;
+    height: 100px;
+  }
+
+  .page-subtitle 	{
+	font-size: 1.25rem;
+	}
+
+	.margins-med 	{
+		margin: 0 10rem;
+	}
+}
+
+.page-header-nav a:hover   {
+  text-decoration: underline;
+  background: #0083b3;
+  font-weight: 800;
+}
+
+.page-header 	{
+	background-color: var(--main-header-color);
+	background-color: hsla(195, 100%, 15%, 1);
+	padding: 1.25rem 0 1.5rem 0;
+}
+
+form {
+    background-color: hsla(195, 100%, 15%, .8);
+    color: #fafafa;
+    padding: 1rem 1.5rem;
+    margin: 1.65rem 0 0 0;
+ }
+
+@media screen and (min-width: 550px) {
+	.post form {
+	margin: 1.65rem 7.5rem 0 7.5rem;
+	}
+	form 	{
+		padding: 1rem 3rem;
+	}
+}
+
+label {
+    display: block;
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.8;
+    color: #f2f2f2;
+}
+input[type="submit"] {
+    border: 0;
+    box-shadow: inset 0px 3px 12px #999;
+    padding: 0.5em;
+    font-size: 120%;
+    /*color: hsla(47, 100%, 97%, 1);*/
+    margin: .5em auto 1em auto;
+    width: 100%;
+    /*background-color: hsla(9, 58%, 18%, .05);*/
+}
+
+#message textarea, input[type="email"] {
+ 	width: 100%;
+  }
+
+::marker 	{
+	color: var(--main-header-color);
+	color: hsla(195, 100%, 15%, 1);
+}
+
+@media print {
+	h1.blog-title {
+		color: var(--main-color);
+		color: hsl(0, 0%, 4%);
+	}
+}
+
+.noindent 	{
+	text-indent: 0;
+}
+
+/* Following: styling for the store pages */
+
+.store-title 	{
+	color: #fafafa;
+}
+/* End store-specific stylings */
+
+.readabletext 	{
+	padding: 0 0;
+}
+@media screen and (min-width: 550px) {
+	.readabletext   {
+    	padding: 0 20vw;
+	}
+	#two-scroll-wrapper .readabletext 	{
+		padding: 0 12vw;
+	}
+}
+
+ul {
+	padding-left: 1.25rem;
+}
+
+.main-nav 	{
+	padding-top: .85rem;
+}
+
+
+
 
 
 
