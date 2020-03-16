@@ -1,0 +1,16 @@
+
+	<div class="footerwrap">
+		<div class="contact">
+			<?php perch_content('Contact Information') ?>	
+		</div>		
+			<div class="panel">	
+				<?php perch_content('Footertext') ?>
+				<?php
+					perch_collection('Song Quotes', [
+    					'count' => 1,
+    					'sort'  => 'songquote', 
+    					'sort-order' => 'RAND',
+						]);
+					?>
+			</div>
+	</div>
