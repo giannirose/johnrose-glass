@@ -7,8 +7,6 @@
 <meta name="msvalidate.01" content="F677B62211ACEFF3097F9FDF26815A55" />
 <meta name="format-detection" content="telephone=no">
 <title>John Rose</title>
-	<?php perch_page_attributes(); ?>
-	<?php perch_get_css(); ?>
 			<!--enter google analytics-->
 		<script type="text/javascript">
 			  var _gaq = _gaq || [];
@@ -21,11 +19,21 @@
 			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			  })();
 		</script>
-		<!--End enter google analytics--> 
+		<!--End enter google analytics-->
+<style>
+
+</style>
+
+<link rel="preload" href="/perch/resources/projects/epl1stfloordrawing1024464-1.jpg" as="image" media="(max-height: 1024px)">
+<link rel="preload" href="/perch/resources/projects/1stunitmethnarthex512512.jpg" as="image" media="(max-height: 1024px)">
+
+	<?php perch_page_attributes(); ?>
+	<?php perch_get_css(); ?>
+ 
 </head>
 	<body class="menupage">
 		<div class="wrapper page-content"><!--div is closed in global/footer-->
-			<?php perch_content('Page Heading with Image'); ?>
+			<?php perch_content('Page Heading'); ?>
 
 			<?php perch_content('Main Navigation'); ?>
 
@@ -33,9 +41,8 @@
 
 			<?php perch_content('Types of Work- Features a Label with Image(s) and Text'); ?>
 
-    <?php perch_content('Link to Top of Page'); ?>
+    <?php perch_form('subscribe.html'); ?>
 
 <?php perch_layout('global/footer'); ?><!-- body tag and div class="wrapper" are closed in the global footer-->
 
     <?php PerchUtil::output_debug(); ?>
-
