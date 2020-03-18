@@ -1,0 +1,19 @@
+<div class="art_clear figctr">
+	<figure class="figure_ctr">
+		<img src="<perch:content type="image" id="image_ctr_art" label="Image" title="true" />" alt="<perch:content type="text" id="alt" label="Description"  help="A short and simple description of the image to be used by screen readers. This will not appear on the page."  required="true" title="true" />" />
+			<figcaption class="figure-caption">
+				<perch:if exists="figure_caption">
+				<p><perch:content id="figure_caption" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" /></p>
+				</perch:if>
+					<cite>
+						<perch:content type="checkbox" id="copyrightsymbol" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+							<perch:if exists="copyrightsymbol">
+								 <p class="copyright">&copy; <span><perch:content id="copyrightyear" type="text" label="Copyright Year"  help="The copyright symbol and year, along with the citation listed below, appear on a line below the caption." /></span>
+							</perch:if>  
+								<span><perch:content id="imgwtcite" type="text" label="Artwork Citation or additional info&hellip;"  help="Enter the artist or photographer name, or skip the copyright symbol and year and add any additional info." html="true" /></span>
+								</p> 
+
+					</cite>
+			</figcaption>
+	</figure>
+</div>
