@@ -1,0 +1,6 @@
+<perch:content type="checkbox" id="asideright" value="1" label="Check to show the aside box floated on the right side of the page" divider-before="Editor: Check the box to make the \"Aside Box\" appear, and make sure to un-check the box to make the \"Aside Box\" disappear."  order="1" suppress="true" />	
+	<perch:if exists="asideright">	
+		<aside class="asideright panel">
+			<perch:content id="asidetext" type="textarea" label="Text" markdown="true" editor="markitup" imagewidth="640" imageheight="480" html="true" />
+		</aside>
+	</perch:if>
