@@ -1,0 +1,25 @@
+<!--Begin flexbox folio (listing of images)-->
+<div class="folio-lamps">
+	<div class="readabletext"><!--Introduction to list of images-->
+		<perch:if exists="folio_head">
+			<h4 class="article"><perch:content type="text" id="folio_head" label="Headline for the folio items to follow" /></h4>
+		</perch:if>
+			<perch:if exists="folio_text">
+				<perch:content type="textarea" id="folio_text" label="Text to briefly explain the folio items to follow" markdown="true" editor="markitup" size="m" />
+			</perch:if>
+	</div><!--End introduction-->	
+		<div class="folio-wrapper"><!--Begin list of images-->
+			<ul>
+				<perch:repeater id="flexi_images" label="Image" >
+					<li>
+						<figure>
+		    				<img lazyload src="<perch:content type="image" id="image" label="Image" help="Upload or select an image" bucket="lamprepair"  />" alt="<perch:content type="text" id="alt" label="Description" required="true" help="Description of this image" />" />
+								<figcaption class="figure-caption">
+									<p><perch:content id="figure_caption" type="textarea" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" markdown="true" editor="markitup" size="s" /></p>
+								</figcaption>
+						</figure>
+					</li>
+				</perch:repeater>
+			</ul>
+		</div><!-- End folio-wrapper -->
+</div><!--End flexbox folio-->
