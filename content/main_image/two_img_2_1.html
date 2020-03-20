@@ -1,0 +1,92 @@
+<li class="project">
+<!--Begin grid defined area for individual projects-->
+   <div class="<perch:content type="select" id="choose_gridfloat" label="Choose the grid or float layout. Float wraps below images." options="Grid|mainimggrid, Float|mainimgfloat" allowempty="false" html="true" /> <perch:content type="select" id="choose_arrange" label="Choose from Main Image followed by Text, or Text followed by Main Image." options="Images Followed by Text|mainimggrid2, Text Followed by Images|mainimggrid2rev" allowempty="false" html="true" help="This choice is simply to provide variety in presentation on the page" /> ">
+      <h2 class="headingintro"><perch:content type="text" id="mainimghead" label="Headline for the text area." title="true" notes-before="Editor: The following is the Headline and Text Body- the main text for this area." /></h2>
+         <!--Begin image and content together-->
+         <div class="mainimg twoimguno">
+            <!--Begin Main Image-->
+            <figure><!--Add detail image-->
+               <img src="<perch:content type="image" id="mainimguno" label="Main image" bucket="images" />" alt="<perch:content type="text" id="altmainimguno" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page." required="true" />" />
+                <!--Begin caption and citation area-->
+                  <figcaption class="figure-caption">
+                     <p><perch:content id="figure_caption" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" />   </p>
+                        <cite>
+                           <p>
+                              <perch:content type="checkbox" id="copyrightsymbol" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+                                 <perch:if exists="copyrightsymbol">
+                                    <span class="copyright">&copy; </span> 
+                                 </perch:if>
+                                    <perch:content id="imgcite1" type="text" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true" />
+                           </p> 
+                        </cite>
+                  </figcaption>
+            </figure>
+            <!--End Caption and Citation area-->
+         </div> <!--End class twoimguno div-->
+         <!--Add Image 2 of 2-->
+         <div class="mainimg twoimgdue ">
+            <figure>
+               <img src="<perch:content type="image" id="mainimgdue" label="Main image" bucket="images" />" alt="<perch:content type="text" id="altmainimgdue" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page." required="true" />" />
+                  <!--Begin caption and citation area-->
+                  <figcaption class="figure-caption">
+                     <p><perch:content id="figure_caption2" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" /></p>
+                        <cite>
+                           <p>
+                              <perch:content type="checkbox" id="copyrightsymbol2" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+                                 <perch:if exists="copyrightsymbol2">
+                                    <span class="copyright">&copy; </span> 
+                                 </perch:if>
+                                    <perch:content id="imgcite2" type="text" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true" />
+                           </p> 
+                        </cite>
+                  </figcaption>
+                  <!--End Caption and Citation area-->
+            </figure>
+         </div><!--end class twoimgdue div-->
+         <!--Add written content here-->
+         <div class="maintxt">
+            <perch:content type="textarea" id="mainimgtxt" label="Body text to describe this section" size="m" markdown="true" editor="markitup" html="true" />
+         </div>
+         <!--End written content-->
+         <!--Begin flexi-folio-->    
+            <div class="folio">
+               <div class="folio-wrapper"><!--Begin folio-wrapper-->
+                  <perch:before>
+                     <perch:if exists="folio_head">
+                        <h4 class="article foliohead"><perch:content type="text" id="folio_head" label="Headline for the folio items to follow" /></h4>
+                     </perch:if>
+                     <perch:if exists="folio_text">
+                        <div class="foliotext">
+                           <perch:content type="textarea" id="folio_text" label="Text to briefly explain the folio items to follow" markdown="true" editor="markitup" size="s" />
+                        </div>
+                     </perch:if>
+                        <ul>
+                  </perch:before>
+                     <perch:repeater id="flexi_images_two" label="Detail Images: For editing, click the arrow to the left to collapse and open this section." notes-before="Editor- These images will be arrayed below the Main Image and Text." >
+                        <li class="art_clear figctr">
+                           <figure class="figure-ctr">
+                              <img src="<perch:content type="image" id="image_ctr_art" label="Image" bucket="images" />" alt="<perch:content type="text" id="alt" label="Description" help="A short description will be available to screen readers, aiding accessibility." required="true"/>" />
+                                  <!--Begin caption and citation area-->
+                                 <figcaption class="figure-caption">
+                                    <p><perch:content id="figure_caption" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true"/></p>
+                                       <cite>
+                                          <p>
+                                             <perch:content type="checkbox" id="copyrightsymbol" value="1" label="Check this box to display the &copy; symbol" suppress="true" checked="checked" />
+                                                <perch:if exists="copyrightsymbol">
+                                                   <span class="copyright">&copy;</span>
+                                                </perch:if>
+                                                   <perch:content id="imgwtcite" type="text" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true"/>
+                                          </p> 
+                                       </cite>
+                                 </figcaption>  
+                                 <!--End Caption and Citation area-->
+                           </figure>
+                        </li>
+                     </perch:repeater>
+                  <perch:after></ul></perch:after>
+            </div><!-- End folio-wrapper -->
+         </div> <!--End class="folio"-->
+         <!--End flexi-folio-->               
+   </div><!--End class mainimggrid-->
+</li>
+<hr />
