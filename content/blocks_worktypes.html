@@ -1,0 +1,39 @@
+<perch:help>
+This page can show ay given type of work; one project can be followed by another. It is designed for a main image with some text and accompanying detail images. <br>
+A main image for each example can be chosen. The choices are listed in a row at the red arrow. Images can have captions and copyright information.<br> Options are for <br>1) a full page width headline image; <br>2) a tall image spanning one column and two rows, with the accompanying text two columns wide; <br>3) an image and text arranged horizontally 1:1;, and <br>4) an image and text arranged horizontally 2(image):1(text).<br>
+The tall image option (2) permits detail photos in the two-column text section, or this can be skipped and detailed images can be added under the main photo and text and spanning all three columns of the page.<br>
+The order of image and text can also be reversed to give variety and separation to examples presented.<br><br>
+We don't want captions too much wider than the image they explain. Insert a break tag where the additional line should begin. Here is a break tag: &lt;br&gt;
+</perch:help>
+<perch:before>
+   <div class="basicgrid">	
+	  <ul class="colorarraylt">
+</perch:before>
+   <perch:content type="text" id="name_edit_item" label="Name for this item." help="Editor: This gives a name to this item in the edit area, rather than Item1, Item2, etc. It does not appear on the page." title="true" suppress="true"/>
+      <perch:blocks scope-parent="true">
+         <perch:block type="Main Image 1-1" label="Style 1) Main Image and text are side-by-side in a 1:1 ratio. Detail Images can be added." />
+               <perch:template path="content/main_image/main_img_1_1.html" />
+         </perch:block>
+            <perch:block type="Main Image 2-1" label="Style 2) Main Image and text are side-by-side: in a 2:1 ratio. Detail Images can be added." >
+               <perch:template path="content/main_image/main_img_2_1.html" />
+            </perch:block>
+               <perch:block type="Main Image Tall" label="Style 3) Tall Images may be the best fit for this template. The image is 1 column (of 3) wide and 2 rows high. The text occupies the other 2 columns. Detail Images can be added." >
+                  <perch:template path="content/main_image/main_img_tall.html" />
+               </perch:block>
+                  <perch:block type="Dbl Image 2-1" label="Style 4) Two Images and text are ina a row: in a 1:1:1 ratio. Images are floated. Detail Images can be added." >
+                     <perch:template path="content/main_image/two_img_2_1.html" />
+                  </perch:block>               
+                     <perch:block type="Stacked Images" label="Style 5) Two images are stacked with text to one side. This is good for complementary horizontal images." >
+                        <perch:template path="content/main_image/two_img_stack.html" />
+                     </perch:block> 
+                        <perch:block type="Main Image Full Head" label="Style 6) Main Image is full width at the top, with text below and optional detail images below the text." >
+                           <perch:template path="content/main_image/main_img_head.html" />
+                        </perch:block>
+                           <perch:block type="Folio" label="Style 7) Folio, which does not have a feature image, but displays an array of images in rows." >
+                                 <perch:template path="content/main_image/folio_list.html" />
+                           </perch:block>                
+      </perch:blocks>
+<perch:after>
+	  </ul>
+   </div>
+</perch:after>
