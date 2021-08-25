@@ -3,6 +3,7 @@
 		<?php perch_content('Page Heading'); ?>
 			<?php perch_content('Main Navigation'); ?>
 				<?php perch_content('Timely Alert'); ?>
+				<?php perch_content('Timely Alert Solo'); ?>
  					<?php perch_content('Article Blocks'); ?>
  						<?php perch_content('Folio'); ?>
 							<?php perch_content('Link to Top of Page'); ?>
