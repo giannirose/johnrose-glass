@@ -1,1 +1,13 @@
-
+<perch:help>Editor: For help with formatting the large textarea using the Markdown editor, <a href="/format.php">consult this formatting help page</a>.<br /><br />
+		Editor: This "Emergency Alert" region will appear ahead of all other content on the page when the checkbox is checked.<br /> <br />
+		Remember to &quot;Save Changes&quot;.
+</perch:help> 
+		<perch:content type="checkbox" id="timelyalert" value="1" label="Check to show the Emergency Alert box" divider-before="Editor: Check the box to make the \"Emergency Alert\" appear, and make sure to un-check the box to make the \"Emergency Alert\" disappear."  order="1" suppress="true" />	
+			<perch:if exists="timelyalert">	
+				<div class="timelyalert">
+					<perch:content id="event_date" type="date" label="Date of event" format="D d F y">
+					<h1><perch:content id="sidebarhead" type="text" label="Headline for the Emergency Alert." order="2" /></h1>
+						<h2><perch:content id="notice_intro" type="text" label="Sub-headline  (if desired) for the Emergency Alert"/></h2>
+							<perch:content id="timelytext" type="textarea" label="Enter emergency information" markdown="true" editor="markitup" size="m"/><br>
+			</div> <!--end .timelyalert-->
+		</perch:if>
