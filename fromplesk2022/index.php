@@ -4,7 +4,6 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="msvalidate.01" content="F677B62211ACEFF3097F9FDF26815A55" />
 <meta name="format-detection" content="telephone=no">
 <title>John Rose</title>
 	<?php perch_page_attributes(); ?>
